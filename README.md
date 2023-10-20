@@ -10,7 +10,6 @@
     * c6911883-1843-3727-8eaa-41dc8cda8993
     * cd38ac0b-c5a6-3743-a148-f4f7b804ed17
     * d4d9e91f-0f8e-334d-bd0e-0d062467308a
-    * d60558d2-d1aa-34ee-a902-e061e346e02a
     * dcdcd8b3-0ba1-3218-b2ea-7bb965aad3f0
     * de777454-df62-3d5a-a1ce-2edb5e5d4922
     * e17eed4f-3ffd-3532-ab89-41a3f24cf226
@@ -33,7 +32,7 @@
 * run format_Argoverse.py
 
 ### MCG:
-Download MCG_region_proposals.zip here: [LINK] and unzip into datasets/region_proposals.
+Download MCG_region_proposals.zip here: https://www.dropbox.com/scl/fi/a2nbharv9t69pnwm9p7yc/weights.zip?rlkey=g6i2qy7xivdi4zfulfb7mdldr&dl=0 and unzip into datasets/proposals.
 
 Running the MCG code to recreate region proposals requires installing Matlab with the Parallel Processing and Image Visualisation Packages. This is not necessary, as we provide downloads for the region proposals, but if you would like to run this section:
 
@@ -114,5 +113,10 @@ cd model_libraries/WSDDN/
 
 Training WSDDN on Argoverse:
 ```
-python tools/train.py config/wsod/wsddn_faster_rcnn_r50_argoverse.py
+python tools/train.py config/wsod/wsddn.py
+```
+
+Testing WSDDN on Argoverse:
+```
+python tools/test.py configs/wsod/wsddn.py ../../weights/WSDDN/finetuned.pth
 ```

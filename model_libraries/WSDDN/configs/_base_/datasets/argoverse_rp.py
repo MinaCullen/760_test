@@ -53,7 +53,7 @@ train_dataloader = dict(
         data_root=data_root,
         ann_file='Argoverse-HD/annotations/train_new.json',
         data_prefix=dict(img='Argoverse-1.1/tracking'),
-        proposal_file='proposals/scores/argo_train_new_rp.pkl',
+        proposal_file='./../proposals/WSDDN_proposals/argo_train_new_rp.pkl',
         pipeline=train_pipeline,
         filter_cfg=dict(filter_empty_gt=True, min_size=32),
     )
@@ -70,7 +70,7 @@ val_dataloader = dict(
         data_root=data_root,
         ann_file='Argoverse-HD/annotations/val_new.json',
         data_prefix=dict(img='Argoverse-1.1/tracking'),
-        proposal_file='proposals/scores/argo_val_new_rp.pkl',
+        proposal_file='./../proposals/WSDDN_proposals/argo_val_new_rp.pkl',
         pipeline=test_pipeline,
     )
 )
@@ -86,7 +86,7 @@ test_dataloader = dict(
         data_root=data_root,
         ann_file='Argoverse-HD/annotations/test_day.json',
         data_prefix=dict(img='Argoverse-1.1/tracking'),
-        proposal_file='proposals/test_day_night/argo_test_day_rp.pkl',
+        proposal_file='../../proposals/WSDDN_proposals/argo_test_rp.pkl',
         pipeline=test_pipeline,
     )
 )
@@ -99,6 +99,6 @@ val_evaluator = dict(
 
 test_evaluator = dict(
     type='CocoMetric',
-    ann_file=data_root + 'Argoverse-HD/annotations/test_day.json',
+    ann_file=data_root + 'Argoverse-HD/annotations/test.json',
     metric=['bbox'],
     format_only=False)
