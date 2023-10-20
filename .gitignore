@@ -1,0 +1,4 @@
+datasets/*
+weights/*
+model_libraries/YOLOv7/runs/*
+model_libraries/YOLOv7/traced_model.pt
