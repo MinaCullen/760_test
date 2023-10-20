@@ -32,7 +32,7 @@
 * run format_Argoverse.py
 
 ### MCG:
-Download MCG_region_proposals.zip here: https://www.dropbox.com/scl/fi/a2nbharv9t69pnwm9p7yc/weights.zip?rlkey=g6i2qy7xivdi4zfulfb7mdldr&dl=0 and unzip into datasets/proposals.
+Download MCG_region_proposals.zip here: https://www.dropbox.com/scl/fi/ddasyxvejmwdf9f07877n/proposals.zip?rlkey=usdi3kmyeav9t0ozglzelrtsf&dl=0 and unzip into datasets/proposals.
 
 Running the MCG code to recreate region proposals requires installing Matlab with the Parallel Processing and Image Visualisation Packages. This is not necessary, as we provide downloads for the region proposals, but if you would like to run this section:
 
@@ -46,7 +46,7 @@ run MCG/scripts/im2mcg_all.m
 
 ## Models:
 
-Download weights.zip from [LINK]. Place in weights/
+Download weights.zip from https://www.dropbox.com/scl/fi/a2nbharv9t69pnwm9p7yc/weights.zip?rlkey=g6i2qy7xivdi4zfulfb7mdldr&dl=0. Place in weights/
 
 ### YOLOv7:
 Set up environment:
