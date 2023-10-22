@@ -120,3 +120,36 @@ Testing WSDDN on Argoverse:
 ```
 python tools/test.py configs/wsod/wsddn.py ../../weights/WSDDN/finetuned.pth
 ```
+
+### Wetectron
+
+Set up environment:
+
+```
+cd environments/
+conda env create -f Wetectron.yml
+conda activate wetectron
+```
+
+Running Wetectron processes:
+
+```
+cd model_libraries/wetectron/
+```
+
+Training Wetectron on Argoverse:
+```
+python -m torch.distributed.launch tools/train_net.py \
+    --config-file "configs/argoverse/V_16_argoverse.yaml" TEST.IMS_PER_BATCH 1 \
+    OUTPUT_DIR workdir/v16_argoverse \
+```
+
+Testing Wetectron on Argoverse:
+
+```
+python -m torch.distributed.launch tools/test_net.py \
+    --config-file "configs/argoverse/V_16_argoverse.yaml" TEST.IMS_PER_BATCH 2 \
+    --vis
+    OUTPUT_DIR workdir/v16_argoverse \
+    MODEL.WEIGHT ../../weights/wetectron/model_final.pth
+```
